@@ -1,0 +1,21 @@
+R
+R: EDA, 가설검정, ML, DL, ........
+R: RMarkdown 
+R: shiny = dashboard
+
+
+
+RMarkdown : 분석 + 보고서
+
+Tidyverse Korea : 한달에 한번정도 meetup, 역삼역
+데이터 뽀개기 : 이상열
+KRUG
+
+Conference
+
+Cosera: 영어
+DataCamp : 영어
+U-tube : R 강의.R Lecture
+멀티 캠퍼스, 패스트 캠퍼스 : 저녁강의, 주말강의.
+
+Gaggle, UCLA

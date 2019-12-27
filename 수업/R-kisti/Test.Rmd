@@ -1,0 +1,62 @@
+---
+title: "EDA"
+author: "jinuk"
+date: '2019 11 6 '
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r}
+library(tidyverse)
+library(epiDisplay)
+```
+
+
+# EDA : Explorer Data Analysis
+## 1.  uni-variate Qualitative Data Analysis
+### 1.1 Frequency Table
+
+```{r}
+diamonds %>% 
+  dplyr::group_by(cut) %>% 
+  dplyr::summarise(n = n()) %>% 
+  dplyr::mutate(percent = round((n/sum(n))*100,digits = 3))
+```
+
+```{r echo=FALSE}
+diamonds %>% 
+  dplyr::group_by(cut) %>% 
+  dplyr::summarise(n = n()) %>% 
+  dplyr::mutate(percent = round((n/sum(n))*100,digits = 3))
+```
+
+<br>
+### 1.2 그래프
+```{r}
+diamonds %>% 
+  ggplot2::ggplot(mapping = aes(x = cut))+
+  ggplot2::geom_bar(col = "purple")
+```
+
+
+### 1.3 표와 그래프
+```{r}
+diamonds %>% 
+  purrr::keep(is.factor) %>% 
+  purrr::map(epiDisplay::tab1)
+```
+
+
+
+<br>
+지금은 EDA 과정을 진행하고 있습니다.
+
+<br>
+<img src="/Users/jeongjin-uk/Documents/R-kisti/ktx1115.png">
+
+
